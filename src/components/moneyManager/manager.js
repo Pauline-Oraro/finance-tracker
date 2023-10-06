@@ -4,6 +4,7 @@ import TransactionItem from '../transactionItem/item';
 import MoneyDetails from '../moneyDetails/details';
 import React from 'react';
 
+//an array that represents transaction types: income and expenses
 const transactionTypeOptions = [
     {
         optionId: 'INCOME',
@@ -121,7 +122,7 @@ class MoneyManager extends React.Component {
         <div className="app-container">
         <div className="responsive-container">
             <div className="header-container">
-            <h1 className="heading">Finance Tracker</h1>
+            <h1 className="heading">Finance Tracker &#128176;</h1>
             </div>
             <MoneyDetails
                 balanceAmount={balanceAmount}
@@ -166,18 +167,17 @@ class MoneyManager extends React.Component {
                     </option>
                 ))}
                 </select>
-                <button type="submit" className="button">
-                        Add
-                </button>
+                <button type="submit" className="button">ADD</button>
             </form>
-                <div className="history-transactions">
+            <div className='hTransactions'>
+            <div className="history-transactions">
                 <h1 className="transaction-header">History</h1>
                 <div className="transactions-table-container">
                     <ul className="transactions-table">
                     <li className="table-header">
-                        <p className="table-header-cell">TITLE</p>
-                        <p className="table-header-cell">AMOUNT</p>
-                        <p className="table-header-cell">TYPE</p>
+                        <p className="table-header-cell" >Title</p>
+                        <p className="table-header-cell" >Amount</p>
+                        <p className="table-header-cell" >Type</p>
                     </li>
                     {transactionsList.map(eachTransaction => (
                     <TransactionItem
@@ -189,6 +189,8 @@ class MoneyManager extends React.Component {
                 </ul>
                 </div>
             </div>
+            </div>
+                
             </div>
         </div>
         </div>

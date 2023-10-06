@@ -1,6 +1,9 @@
 import './details.css';
 
+
+//responsible for rendering the balance, income and expenses
 const MoneyDetails = props =>{
+    //represent the financial values for balance, income and expenses
     const {balanceAmount, incomeAmount, expensesAmount} = props
     return (
         <div className="money-details-container">

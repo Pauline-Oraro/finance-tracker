@@ -1,10 +1,13 @@
 import './item.css';
 
 
+//display the history of the user's transactions
 const TransactionItem = props => {
     const {transactionDetails, deleteTransaction} = props
+    //represent the details of a transaction
     const {id, title, amount, type} = transactionDetails
     
+    //it is called when the delete button is clicked
     const onDeleteTransaction = () => {
         deleteTransaction(id)
     }
